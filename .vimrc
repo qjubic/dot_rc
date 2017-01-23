@@ -3,6 +3,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+"search into subfolders and tab completion
+set path+=**
+set wildmenu
+
 " Unmap the arrow keys
 no <down> ddp
 no <left> <Nop>
