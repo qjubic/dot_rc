@@ -1,17 +1,40 @@
-" for pathogen
-execute pathogen#infect()
-syntax on
+" Disable vi-stuff
+set nocompatible
+set encoding=utf-8
+
+" Detect filetype
+filetype plugin on
+" Enable syntax highighting
+syntax enable
+" 256 colours please
+set t_Co=256
+" color and theme 
+set background=dark
+colorscheme desert
+" Open splits to the right or below; more natural than the default
+set splitright
+set splitbelow
+
+" Text management
+
 filetype plugin indent on
-
-if !has("gui_running")
-    :source $VIMRUNTIME/menu.vim 
-    :set wildmenu                        
-    :set cpoptions-=<
-    :set wildcharm=<C-Z>
-    :map <F4> :emenu <C-Z>
-endif
-
-let g:slimv_swank_cmd='! urxvt -e sbcl --load ~/.vim/bundle/slimv/slime/start-swank.lisp &'
+" 2 spaces please
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+" Round indent to nearest multiple of 2
+set shiftround
+" No line-wrapping
+set nowrap
+" Spell-check always on
+set spell
+" Underscores denote words
+set iskeyword-=_
+" No extra spaces when joining lines
+set nojoinspaces
+" Interpret numbers with leading zeroes as decimal, not octal
+set nrformats=
 
 " change <leader>
 let mapleader=","
@@ -45,4 +68,32 @@ imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 
+" Visual decorations
 
+" Show status line
+set laststatus=2
+" Show what mode you're currently in
+set showmode
+" Show what commands you're typing
+set showcmd
+" Allow modelines
+set modeline
+" Show current line and column position in file
+set ruler
+" Show file title in terminal tab
+set title
+" Show invisibles
+set list
+set listchars=tab:»-,trail:•
+" Set relative line numbers...
+set relativenumber
+" ...but absolute numbers on the current line
+set number
+" Limit line-length to 80 columns by highlighting col 81 onward
+set colorcolumn=81
+" Force cursor onto a new line after 80 characters
+set textwidth=80
+" Highlight current line
+set tgc
+set cul
+set cursorline
