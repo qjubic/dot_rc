@@ -90,9 +90,11 @@ set relativenumber
 " ...but absolute numbers on the current line
 set number
 " Limit line-length to 80 columns by highlighting col 81 onward
-set colorcolumn=81
+" set colorcolumn=81
+
 " Force cursor onto a new line after 80 characters
-set textwidth=80
+" set textwidth=80
+
 " Highlight current line
 set tgc
 set cul
